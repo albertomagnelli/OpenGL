@@ -15,7 +15,7 @@ if (!glfwInit()) {
 }
 ----
 
-Am Ende des Programmes wird diese Bibliothek mittel glfwTerminate() wieder freigegeben.
+Am Ende des Programmes wird diese Bibliothek mittels der Funktion glfwTerminate() wieder freigegeben.
 
 .Deinitialisierung von GLFW
 [source%autofit,c++,numbered]
