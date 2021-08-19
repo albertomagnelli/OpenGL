@@ -1,0 +1,19 @@
+=== OpenGL Examples and Tutorials
+
+.Verwendete Libraries
+- https://www.glfw.org/[GLFW] Plattform unabhängige Erstellung eines OpenGL Renderkontextes
+- https://glad.dav1d.de/[GLAD]  GL/GLES/EGL/GLX/WGL Loader-Generator
+- https://github.com/SpartanJ/SOIL2[SOIL2] Simple OpenGL Image Library 2
+- https://github.com/g-truc/glm[glm] OpenGL Mathematik für Matrix und Vektor Berechnungen
+- https://github.com/assimp/assimp[assimp] Open Asset Import Library
+
+
+.Verwendete Quellen
+- https://learnopengl.com[Learn OpenGL] Joey de Vries
+- https://open.gl/
+- http://www.opengl-tutorial.org/
+- https://antongerdelan.net/opengl/index.html[Anton's OpenGL 4 Tutorials] Anton Gerdelan
+- https://ogldev.org/ Etay Meiri
+- https://github.com/SaschaWillems/openglcpp Sascha Willems
+- http://paulbourke.net/geometry/[Geometry, Surfaces, Curves, Polyhedra] Paul Bourke
+- https://github.com/TheThinMatrix
