@@ -19,5 +19,5 @@
 - https://github.com/TheThinMatrix
 
 === Tutorials und Beispiele
-- examples/README.adoc [Beispiele]
+- link:examples/README.adoc[Beispiele]
 - https://github.com/albertomagnelli/OpenGL/tutorials[Tutorials]
