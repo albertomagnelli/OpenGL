@@ -1,5 +1,5 @@
 === einen Renderkontext erstellen
-Der Renderkontext wird mit Hilfe der GLFW Bibliothek erstellt.
+Der Renderkontext wird mithilfe der GLFW Bibliothek erstellt.
 Die Dokumentation dazu findet man unter https://www.glfw.org/documentation.html[Dokumentation GLFW].
 
 .Initialisierung von GLFW
@@ -43,7 +43,7 @@ glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
 <2> OpenGL Unterversion
 <3> Anzahl der MSAA (Multisampling Anti-Aliasing) Samples
 
-Anschließend kann das Renderfenster erstellt werden, und das zugehörige Kontext als aktuell gesetzt werden.
+Anschließend kann das Renderfenster erstellt werden, und der zugehörige Kontext als aktuell gesetzt werden.
 
 .Fenster erstellen und Kontext aktuell setzen
 [source%autofit,c++,numbered]
