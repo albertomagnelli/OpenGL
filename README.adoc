@@ -20,4 +20,4 @@
 
 === Tutorials und Beispiele
 - link:examples/README.adoc[Beispiele]
-- https://github.com/albertomagnelli/OpenGL/tutorials[Tutorials]
+- link:tutorials/README.adoc[Tutorials]
