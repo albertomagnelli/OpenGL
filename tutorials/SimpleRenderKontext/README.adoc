@@ -6,6 +6,8 @@ Die Dokumentation dazu findet man unter https://www.glfw.org/documentation.html[
 [source%autofit,c++,numbered]
 ----
 #include <stdexcept>
+
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 ...
@@ -52,9 +54,38 @@ GLFWwindow *window = glfwCreateWindow(width, height,
                             title.c_str(),
                             fullscreen ? glfwGetPrimaryMonitor() : nullptr, nullptr);
 if (!window) {
-glfwTerminate();
-throw std::runtime_error("glfwCreateWindow() fails");
+    glfwTerminate();
+    throw std::runtime_error("glfwCreateWindow() fails");
 }
 
 glfwMakeContextCurrent(window);
+----
+
+Um die den vollen Funktionsumfang von OpenGL zu nutzen, ist es erforderlich diese Funktionsaufrufe zu laden.
+Dies erledigt die Bibliothek GLAD.
+
+.GLAD initialisieren
+[source%autofit,c++,numbered]
+----
+if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
+    glfwTerminate();
+    throw std::runtime_error("GLAD Init() fails");
+}
+----
+
+.Zeichenschleife
+[source%autofit,c++,numbered]
+----
+while (!glfwWindowShouldClose(window)) {
+    /* zeichnen */
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    ...
+
+    /* Hintergrundpuffer und Vordergrundpuffer tauschen */
+    glfwSwapBuffers(window);
+
+    /* Ereignisse abholen */
+    glfwPollEvents();
+}
 ----
