@@ -61,7 +61,7 @@ if (!window) {
 glfwMakeContextCurrent(window);
 ----
 
-Um die den vollen Funktionsumfang von OpenGL zu nutzen, ist es erforderlich diese Funktionsaufrufe zu laden.
+Um den vollen Funktionsumfang von OpenGL zu nutzen, ist es erforderlich diese Funktionsaufrufe zu laden.
 Dies erledigt die Bibliothek GLAD.
 
 .GLAD initialisieren
