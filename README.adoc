@@ -17,3 +17,7 @@
 - https://github.com/SaschaWillems/openglcpp Sascha Willems
 - http://paulbourke.net/geometry/[Geometry, Surfaces, Curves, Polyhedra] Paul Bourke
 - https://github.com/TheThinMatrix
+
+=== Tutorials und Beispiele
+- https://github.com/albertomagnelli/OpenGL/examples[Beispiele]
+- https://github.com/albertomagnelli/OpenGL/tutorials[Tutorials]
