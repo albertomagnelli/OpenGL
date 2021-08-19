@@ -90,4 +90,4 @@ while (!glfwWindowShouldClose(window)) {
 }
 ----
 
-Der vollständige Quelltext befindet sich link:main.cpp[hier].
+Der vollständige Quelltext befindet sich link:main.cpp[hier,window=_blank].
