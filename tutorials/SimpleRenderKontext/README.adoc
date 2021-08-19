@@ -1,6 +1,6 @@
 === einen Renderkontext erstellen
 Der Renderkontext wird mithilfe der GLFW Bibliothek erstellt.
-Die Dokumentation dazu findet man unter https://www.glfw.org/documentation.html[Dokumentation GLFW].
+Die Dokumentation dazu findet man unter https://www.glfw.org/documentation.html[Dokumentation GLFW,window=_blank].
 
 .Initialisierung von GLFW
 [source%autofit,c++,numbered]
