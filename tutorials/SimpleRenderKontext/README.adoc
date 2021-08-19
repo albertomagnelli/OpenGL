@@ -1,0 +1,60 @@
+=== einen Renderkontext erstellen
+Der Renderkontext wird mit Hilfe der GLFW Bibliothek erstellt.
+Die Dokumentation dazu findet man unter https://www.glfw.org/documentation.html[Dokumentation GLFW].
+
+.Initialisierung von GLFW
+[source%autofit,c++,numbered]
+----
+#include <stdexcept>
+#include <GLFW/glfw3.h>
+
+...
+
+if (!glfwInit()) {
+    throw std::runtime_error("glfwInit() fails");
+}
+----
+
+Am Ende des Programmes wird diese Bibliothek mittel glfwTerminate() wieder freigegeben.
+
+.Deinitialisierung von GLFW
+[source%autofit,c++,numbered]
+----
+glfwTerminate();
+----
+
+Im nächsten Schritt werden die Eigenschaften für den Renderkontext festgelegt.
+
+.festlegen der Eigenschaften des Renderkontextes
+[source%autofit,c++,numbered]
+----
+uint32_t gl_major{4};
+uint32_t gl_minor{6};
+uint32_t gl_samples{8};
+
+glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, gl_major); <1>
+glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, gl_minor); <2>
+glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+glfwWindowHint(GLFW_SAMPLES, gl_samples); <3>
+glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
+----
+
+<1> OpenGL Hauptversion
+<2> OpenGL Unterversion
+<3> Anzahl der MSAA (Multisampling Anti-Aliasing) Samples
+
+Anschließend kann das Renderfenster erstellt werden, und das zugehörige Kontext als aktuell gesetzt werden.
+
+.Fenster erstellen und Kontext aktuell setzen
+[source%autofit,c++,numbered]
+----
+GLFWwindow *window = glfwCreateWindow(width, height,
+                            title.c_str(),
+                            fullscreen ? glfwGetPrimaryMonitor() : nullptr, nullptr);
+if (!window) {
+glfwTerminate();
+throw std::runtime_error("glfwCreateWindow() fails");
+}
+
+glfwMakeContextCurrent(window);
+----
